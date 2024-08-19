@@ -4,15 +4,7 @@
 - [Introduction](#introduction)
 - [Motivation](#motivation---why-use-docker-in-docker-dind)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Development](#development)
-- [Troubleshooting](#troubleshooting)
-- [Changelog](#changelog)
-- [Roadmap](#roadmap)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-- [Contact Information](#contact-information)
+
 
 ## Introduction
 This project provides a comprehensive guide and setup for running Apache Airflow within a Docker-in-Docker (DinD) environment. It is designed to help users understand how to deploy and manage Airflow using Docker containers, and then leverage Docker operations within Airflow itself.
@@ -26,31 +18,11 @@ Docker-in-Docker combines the lightweight nature of containers with the ability 
 
 By using DinD, each task is encapsulated within its own Docker container, running in an isolated environment. This prevents conflicts and interference between tasks, ensuring that dependencies and operations remain contained. This isolation is crucial for maintaining clean, repeatable, and conflict-free environments, especially in complex or multi-user systems.
 
-[read more here](https://medium.com/@shivam77kushwah/docker-inside-docker-e0483c51cc2c#:~:text=Running%20Docker%20inside%20Docker%20allows,2.)
+[Read more here](https://medium.com/@shivam77kushwah/docker-inside-docker-e0483c51cc2c#:~:text=Running%20Docker%20inside%20Docker%20allows,2.)
 
 ## Getting Started
-...
+#mm
 
-## Usage
-...
-
-## Project Structure
-...
-
-## Development
-...
-
-## Troubleshooting
-...
-
-## Changelog
-...
-
-## Roadmap
-...
-
-## License
-...
 
 ## Acknowledgments
 ...
