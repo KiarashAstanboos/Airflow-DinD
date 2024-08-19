@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Motivation](#Motivation-Why-Use-Docker-in-Docker-(DinD)?)
+- [Motivation](#motivation---why-use-docker-in-docker-dind)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
