@@ -20,14 +20,14 @@ By using DinD, each task is encapsulated within its own Docker container, runnin
 
 [Read more here](https://medium.com/@shivam77kushwah/docker-inside-docker-e0483c51cc2c#:~:text=Running%20Docker%20inside%20Docker%20allows,2.)
 
-## Getting Started
-*m*
-**m**
--mmm
+## Install Requirments
 
+
+## Setup DinD
+
+## Run Dags
 
 ## Acknowledgments
 ...
 
-## Contact Information
-...
+
