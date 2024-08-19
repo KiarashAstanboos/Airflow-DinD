@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Architecture](#architecture)
+- [Motivation - Why Use Docker-in-Docker (DinD)?](#Motivation)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
