@@ -19,8 +19,8 @@ This project provides a comprehensive guide and setup for running Apache Airflow
 
 By the end of this project, you'll have a fully functional Airflow setup running inside Docker, with the capability to perform Docker operations directly from your Airflow tasks. This is an ideal setup for those looking to automate complex workflows that involve managing containerized applications or services.
 
-## Architecture
-...
+## Motivation - Why Use Docker-in-Docker (DinD)?
+[read more here](https://medium.com/@shivam77kushwah/docker-inside-docker-e0483c51cc2c#:~:text=Running%20Docker%20inside%20Docker%20allows,2.)
 
 ## Getting Started
 ...
