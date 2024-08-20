@@ -82,7 +82,7 @@ for example it should look like this:
 >>>  
 >>> \- ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
 >>>  
->>> \- /var/run/docker.sock:/var/run/docker.sock
+>>> \- <strong> /var/run/docker.sock:/var/run/docker.sock </strong>
 >>
 >> #remaining of the file  
 <br>
