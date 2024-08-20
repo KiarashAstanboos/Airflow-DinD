@@ -57,9 +57,11 @@ There are two approaches for using Docker-in-Docker (DinD):
 - Using the official DinD image provided by Docker </strong>
   
 For this setup, we will use the first approach: mounting the Docker socket.
+## Modify docker-compose.yaml
 To mount the Docker socket, add the following line under the `volumes` section in the `docker-compose.yaml` file:
 ``` - /var/run/docker.sock:/var/run/docker.sock ``` .
-for example it should look like this:
+## Example Configuration
+Here’s how your `docker-compose.yaml` file should look with the socket mounted:
 ```yaml
 x-airflow-common:
   &airflow-common
@@ -75,6 +77,7 @@ x-airflow-common:
     - /var/run/docker.sock:/var/run/docker.sock
 # (Rest of the file...)  
 ```
+<strong> Note: </strong> Replace "your-image" with the appropriate Docker image for your Airflow setup. By default, it is set to the latest version when you download the .yaml file from the official website.
 # Run Dags
 
 # Security
