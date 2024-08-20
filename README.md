@@ -1,9 +1,6 @@
-# Airflow Docker-in-Docker Project
-
 # Table of Contents
 - [Introduction](#introduction)
 - [Motivation](#motivation---why-use-docker-in-docker-dind)
-- [Getting Started](#getting-started)
 - [Install Requirements](#install-requirements)
 - [Setup DinD](#setup-docker-in-dockerdind)
 - [Run Dags](#run-dags)
