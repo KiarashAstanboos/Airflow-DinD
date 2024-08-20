@@ -51,42 +51,30 @@ It's a good practice to first create the main directory, then download the Docke
 
 <br>
 
-# Setup DinD
-There are two approaches for using DinD.
-- mount socket.
-- using official DinD image that is provided by docker.
+# Setup Docker-in-Docker(DiD)
+There are two approaches for using Docker-in-Docker (DinD):
+- <strong> Mounting the Docker socket </strong>
+- Using the official DinD image provided by Docker </strong>
   
-We will do the first approach.
-you can mount the socket by pasting ` - /var/run/docker.sock:/var/run/docker.sock ` under the `volumes` section in the `docker-compose.yaml file` .
+For this setup, we will use the first approach: mounting the Docker socket.
+To mount the Docker socket, add the following line under the `volumes` section in the `docker-compose.yaml` file:
+``` - /var/run/docker.sock:/var/run/docker.sock ``` .
 for example it should look like this:
-<br>
-> x-airflow-common:
->>  &airflow-common
->>> . 
->>> .
->>> .
->>>
->>  image: your image(depend on version)
->> 
->>  environment:
->>>.
->>>.
->>>.
->>> 
->> volumes:
->>> \- ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
->>> 
->>> \- ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
->>>   
->>> \- ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
->>>  
->>> \- ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
->>>  
->>> \- <strong><em> /var/run/docker.sock:/var/run/docker.sock </em></strong>
->>
->> #remaining of the file  
-<br>
-
+```yaml
+x-airflow-common:
+  &airflow-common
+    ...
+  image: your-image
+  environment:
+    ...
+  volumes:
+    - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
+    - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
+    - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
+    - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+    - /var/run/docker.sock:/var/run/docker.sock
+# (Rest of the file...)  
+```
 # Run Dags
 
 # Security
