@@ -27,19 +27,24 @@ By using DinD, each task is encapsulated within its own Docker container, runnin
 
 # Install Requirements
 
-Before we dive into setting up Docker-in-Docker (DinD) with Airflow, you'll need to ensure that both Docker and Airflow are installed on your system. If you've already installed them, feel free to skip ahead to the next section.
+Before we dive into setting up Docker-in-Docker (DinD) with Airflow, you'll need to ensure that both Docker and Airflow are installed on your system. If you've already installed them, feel free to skip ahead to the [next section](#setup-dind).
 
 ## 1. Install Docker
-First, you'll need to install Docker. The best resource for this is the official Docker documentation. Alternatively, you can install Docker Desktop, which provides both Docker Engine and Docker Compose, so you won't need any additional tools. Docker Desktop is available for Windows, macOS, and Linux.
+First, you'll need to install Docker Engine and Docker Compose. The best resource for this is the official [Airflow documentation](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#before-you-begin) that is provided for this matter. Alternatively, you can install Docker Desktop, which provides both Docker Engine and Docker Compose, so you won't need any additional tools. Docker Desktop is available for Windows, macOS, and Linux.
 
 ## 2. Install Airflow
 Once Docker is installed, you'll need to set up Airflow. Begin by creating a directory for your Airflow setup. This directory will house your Docker Compose YAML file and any required subdirectories.
+You can find the straight forward guide [here](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#fetching-docker-compose-yaml)
 
 ### Recommended Directory Structure
 It's a good practice to first create the main directory, then download the Docker Compose YAML file into this directory, and finally, create any required subdirectories as specified in the YAML file.
-
-You can find a straightforward guide for setting up Airflow using Docker in the official Airflow documentation.
-
+<br>
+> airflow-docker-setup/
+> ├── docker-compose.yaml
+> ├── dags/
+> ├── logs/
+> └── plugins/
+<br>
 
 # Setup DinD
 
