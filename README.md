@@ -82,6 +82,11 @@ x-airflow-common:
 # (Rest of the file...)  
 ```
 <strong> Note: </strong> Replace "your-image" with the appropriate Docker image for your Airflow setup. By default, it is set to the latest version when you download the .yaml file from the official website.
+
+After this, you are ready to run the docker-compose up command in your terminal. This command will automatically download the required images, such as apache/airflow, redis, and postgres, if you don't already have them locally. Be aware that it may take some time to download these images, especially if you're doing so for the first time.
+
+If you have already downloaded these images from a different Docker image storage, you may need to adjust the image names in the docker-compose.yaml file. To ensure the correct images are being used, you can check the list of images on your system by running the docker images command. The name you use in the docker-compose.yaml file must match the name listed under the "REPOSITORY" section in the output of the docker images command.
+
 # Run Dags
 
 # Security
