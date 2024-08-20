@@ -5,7 +5,7 @@
 - [Motivation](#motivation---why-use-docker-in-docker-dind)
 - [Getting Started](#getting-started)
 - [Install Requirements](#install-requirements)
-- [Setup DinD](#setup-dind)
+- [Setup DinD](#setup-docker---in---docker(dind))
 - [Run Dags](#run-dags)
 - [Security](#security)
 - [Acknowledgments](#acknowledgments)
@@ -51,7 +51,7 @@ It's a good practice to first create the main directory, then download the Docke
 
 <br>
 
-# Setup Docker-in-Docker(DiD)
+# Setup Docker-in-Docker(DinD)
 There are two approaches for using Docker-in-Docker (DinD):
 - <strong> Mounting the Docker socket </strong>
 - Using the official DinD image provided by Docker </strong>
