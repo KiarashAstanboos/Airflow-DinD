@@ -59,7 +59,11 @@ There are two approaches for using Docker-in-Docker (DinD):
 For this setup, we will use the first approach: mounting the Docker socket.
 ## Modify docker-compose.yaml
 To mount the Docker socket, add the following line under the `volumes` section in the `docker-compose.yaml` file:
-``` - /var/run/docker.sock:/var/run/docker.sock ``` .
+
+```
+- /var/run/docker.sock:/var/run/docker.sock
+```
+
 ## Example Configuration
 Here’s how your `docker-compose.yaml` file should look with the socket mounted:
 ```yaml
