@@ -23,7 +23,7 @@ Docker-in-Docker combines the lightweight nature of containers with the ability 
 
 By using DinD, each task is encapsulated within its own Docker container, running in an isolated environment. This prevents conflicts and interference between tasks, ensuring that dependencies and operations remain contained. This isolation is crucial for maintaining clean, repeatable, and conflict-free environments, especially in complex or multi-user systems.
 
-[Read more here](https://medium.com/@shivam77kushwah/docker-inside-docker-e0483c51cc2c#:~:text=Running%20Docker%20inside%20Docker%20allows,2.)
+[Read more here](https://medium.com/@shivam77kushwah/docker-inside-docker-e0483c51cc2c#:~:text=Running%20Docker%20inside%20Docker%20allows,2.).
 
 # Install Requirements
 
@@ -52,6 +52,11 @@ It's a good practice to first create the main directory, then download the Docke
 <br>
 
 # Setup DinD
+There are two approaches for using DinD.
+- mount socket
+- using official DinD image that is provided by docker
+We will do the first approach.
+you can mount the socket by pasting ``` - /var/run/docker.sock:/var/run/docker.sock ``` under the `volumes` section in the `docker-compose.yaml file` .
 
 # Run Dags
 
