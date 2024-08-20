@@ -5,7 +5,7 @@
 - [Motivation](#motivation---why-use-docker-in-docker-dind)
 - [Getting Started](#getting-started)
 - [Install Requirements](#install-requirements)
-- [Setup DinD](#setup-docker---in---docker(dind))
+- [Setup DinD](#setup-docker-in-dockerdind)
 - [Run Dags](#run-dags)
 - [Security](#security)
 - [Acknowledgments](#acknowledgments)
