@@ -20,8 +20,18 @@ By using DinD, each task is encapsulated within its own Docker container, runnin
 
 [Read more here](https://medium.com/@shivam77kushwah/docker-inside-docker-e0483c51cc2c#:~:text=Running%20Docker%20inside%20Docker%20allows,2.)
 
-## Install Requirments
+Before we dive into setting up Docker-in-Docker (DinD) with Airflow, you'll need to ensure that both Docker and Airflow are installed on your system. If you've already installed them, feel free to skip ahead to the next section.
 
+1. Install Docker
+First, you'll need to install Docker. The best resource for this is the official Docker documentation. Alternatively, you can install Docker Desktop, which provides both Docker Engine and Docker Compose, so you won't need any additional tools. Docker Desktop is available for Windows, macOS, and Linux.
+
+2. Install Airflow
+Once Docker is installed, you'll need to set up Airflow. Begin by creating a directory for your Airflow setup. This directory will house your Docker Compose YAML file and any required subdirectories.
+
+Recommended Directory Structure
+It's a good practice to first create the main directory, then download the Docker Compose YAML file into this directory, and finally, create any required subdirectories as specified in the YAML file.
+
+You can find a straightforward guide for setting up Airflow using Docker in the official Airflow documentation.
 
 ## Setup DinD
 
