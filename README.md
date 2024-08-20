@@ -4,6 +4,11 @@
 - [Introduction](#introduction)
 - [Motivation](#motivation---why-use-docker-in-docker-dind)
 - [Getting Started](#getting-started)
+- [Install Requirements](#install-requirements)
+- [Setup DinD](#setup-dind)
+- [Run Dags](#run-dags)
+- [Security](#security)
+- [Acknowledgments](#acknowledgments)
 
 
 # Introduction
@@ -11,7 +16,7 @@ This project provides a comprehensive guide and setup for running Apache Airflow
 
 By the end of this project, you'll have a fully functional Airflow setup running inside Docker, with the capability to perform Docker operations directly from your Airflow tasks. This is an ideal setup for those looking to automate complex workflows that involve managing containerized applications or services.
 
-## Motivation - Why Use Docker-in-Docker (DinD)?
+# Motivation - Why Use Docker-in-Docker (DinD)?
 When it comes to running tasks within data pipelines or automated workflows, there are several approaches you can take. You might run tasks directly on the host system, use virtual machines for isolated environments, or leverage traditional containerization methods. Each of these options has its own set of benefits and limitations. However, when your tasks require the flexibility to manage and operate Docker containers themselves, the Docker-in-Docker (DinD) approach offers distinct advantages.
 
 Docker-in-Docker combines the lightweight nature of containers with the ability to manage Docker operations directly within your tasks. This is particularly beneficial when your workflows involve creating, running, or managing Docker containers as part of their execution. DinD allows for this without requiring elevated permissions on the host system or setting up complex virtual machine infrastructures.
@@ -35,11 +40,13 @@ It's a good practice to first create the main directory, then download the Docke
 
 You can find a straightforward guide for setting up Airflow using Docker in the official Airflow documentation.
 
-# Security
 
 # Setup DinD
 
 # Run Dags
+
+# Security
+
 
 # Acknowledgments
 ...
