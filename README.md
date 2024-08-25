@@ -36,13 +36,15 @@ You can find the straight forward guide [here](https://airflow.apache.org/docs/a
 ### Recommended Directory Structure
 It's a good practice to first create the main directory, then download the Docker Compose YAML file into this directory, and finally, create any required subdirectories as specified in the YAML file.
 <br>
-> airflow-docker-setup/
+> airflow_docker/
 > 
 > ├── docker-compose.yaml
 > 
 > ├── dags/
 > 
 > ├── logs/
+>
+> ├── config/
 > 
 > └── plugins/
 
