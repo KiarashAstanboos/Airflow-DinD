@@ -115,7 +115,7 @@ This will ensure that sensitive data like connection passwords are encrypted in 
 # Acknowledgments
 
 Acknowledgments
-This Airflow Docker-in-Docker tutorial was part of my work during an internship project aimed at automating servers and workflows for various organizations. The project's primary goal was to create a system that not only automates server and workflow management but also avoids conflicts during task execution and provides enhanced monitoring capabilities.
+This Airflow Docker-in-Docker tutorial was part of my work during an internship with the Infrastructure team, aimed at automating servers and workflows for various organizations. The project's primary goal was to create a system that not only automates server and workflow management but also avoids conflicts during task execution and provides enhanced monitoring capabilities.
 
 This documentation is intended to serve as a resource for future team members, ensuring that the workflows and methodologies developed during this project can be easily replicated and further enhanced to meet the needs of the organization.
 
