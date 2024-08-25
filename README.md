@@ -91,14 +91,42 @@ docker pull kiarash8203/dind:latest
 ```
 Alternatively, you can build the image yourself. The code and Dockerfile are available in the pyth_numpy folder.
 
-For creating a DAG, I have also provided a simple example DAG that you can find in the airflow-docker-setup/dags/ directory. Once you have saved your dag.py file, it should appear under the DAGs section in the Airflow interface.
+For creating a DAG, I have also provided a simple example DAG that you can find in the `airflow-docker-setup/dags/` directory. Once you have saved your dag.py file, it should appear under the DAGs section in the Airflow interface.
 
-You can trigger the DAG directly from the interface and monitor its progress in the 'Logs' section. The task should execute successfully if the Docker socket is mounted correctly. If any issues arise, detailed error messages will be available in the 'Logs' section to help with troubleshooting.
+You can trigger the DAG directly from the interface and monitor its progress in the `Logs` section. The task should execute successfully if the Docker socket is mounted correctly. If any issues arise, detailed error messages will be available in the `Logs` section to help with troubleshooting.
 
 # Security
+In addition to using RBAC (Role-Based Access Control), you can enhance the security of your Airflow setup by encrypting sensitive data stored in your database with a Fernet key.
 
+To generate a Fernet key, run the following code in a Python shell:
+```python
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+print(key.decode())
+```
+After generating the Fernet key, add it to the `AIRFLOW__CORE__FERNET_KEY` environment variable in your `docker-compose.yaml` file:
+```yaml
+environment:
+  - AIRFLOW__CORE__FERNET_KEY=your-generated-fernet-key
+```
+
+This will ensure that sensitive data like connection passwords are encrypted in your Airflow metadata database.
 
 # Acknowledgments
-...
+
+Acknowledgments
+This Airflow Docker-in-Docker tutorial was part of my work during an internship project aimed at automating servers and workflows for various organizations. The project's primary goal was to create a system that not only automates server and workflow management but also avoids conflicts during task execution and provides enhanced monitoring capabilities.
+
+This documentation is intended to serve as a resource for future team members, ensuring that the workflows and methodologies developed during this project can be easily replicated and further enhanced to meet the needs of the organization.
 
 
+#Citing This Tutorial
+If you find this tutorial helpful and wish to reference it in your work, please use the following citation format:
+
+```mathematica
+Copy code
+Author: [Your Name]
+Title: "Airflow Docker-in-Docker Tutorial"
+Date: [Month, Year]
+URL: [Repository URL or Documentation URL]
+```
