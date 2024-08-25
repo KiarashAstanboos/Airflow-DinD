@@ -85,13 +85,15 @@ After this, you are ready to run the `docker-compose up` command in your termina
 If you have already downloaded these images from a different Docker image storage, you may need to adjust the image names in the `docker-compose.yaml` file. To ensure the correct images are being used, you can check the list of images on your system by running the `docker images` command. The name you use in the `docker-compose.yaml` file must match the name listed under the <strong><pre>REPOSITORY</pre></strong> section in the output of the `docker images` command.
 
 # Run DAGs
-  To run the DAG you need the docker image in first place. then you can start create your DAG and eventually use 'dockerOperator'. i have uploaded a simple python image in my DockerHub that you can easily pull with
+To run the DAG, you'll first need the Docker image. I have uploaded a simple Python image to my DockerHub, which you can pull using:
 ```
 docker pull kiarash8203/dind:latest
 ```
-or you can build it your self (the code and Dockerfile is in 'pyth_numpy' folder). for creating dag i've also uploaded a simple dag that you can find in 'airflow-docker-setup/dags/' and use it. After saving your dag.py file, the dag must apear under the 'DAGs' field in your airflow interface.
+Alternatively, you can build the image yourself. The code and Dockerfile are available in the pyth_numpy folder.
 
+For creating a DAG, I have also provided a simple example DAG that you can find in the airflow-docker-setup/dags/ directory. Once you have saved your dag.py file, it should appear under the DAGs section in the Airflow interface.
 
+You can trigger the DAG directly from the interface and monitor its progress in the 'Logs' section. The task should execute successfully if the Docker socket is mounted correctly. If any issues arise, detailed error messages will be available in the 'Logs' section to help with troubleshooting.
 
 # Security
 
