@@ -6,7 +6,7 @@
 - [Run Dags](#run-dags)
 - [Security](#security)
 - [Acknowledgments](#acknowledgments)
-
+- [Citing This Tutorial](#citing-this-tutorial)
 
 # Introduction
 This project provides a comprehensive guide and setup for running Apache Airflow within a Docker-in-Docker (DinD) environment. It is designed to help users understand how to deploy and manage Airflow using Docker containers, and then leverage Docker operations within Airflow itself.
@@ -125,7 +125,7 @@ If you find this tutorial helpful and wish to reference it in your work, please 
 
 ```mathematica
 Author: [Kiarash Astanboos]
-Title: "Airflow Docker-in-Docker Tutorial"
+Title: "Airflow DinD"
 Date: [August, 2024]
-URL: [https://github.com/KiarashAstanboos/Airflow-DinD/]
+URL: [https://github.com/KiarashAstanboos/Airflow-DinD]
 ```
