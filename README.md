@@ -120,13 +120,12 @@ This Airflow Docker-in-Docker tutorial was part of my work during an internship 
 This documentation is intended to serve as a resource for future team members, ensuring that the workflows and methodologies developed during this project can be easily replicated and further enhanced to meet the needs of the organization.
 
 
-#Citing This Tutorial
+# Citing This Tutorial
 If you find this tutorial helpful and wish to reference it in your work, please use the following citation format:
 
 ```mathematica
-Copy code
-Author: [Your Name]
+Author: [Kiarash Astanboos]
 Title: "Airflow Docker-in-Docker Tutorial"
-Date: [Month, Year]
-URL: [Repository URL or Documentation URL]
+Date: [August, 2024]
+URL: [https://github.com/KiarashAstanboos/Airflow-DinD/]
 ```
