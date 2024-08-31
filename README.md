@@ -4,6 +4,7 @@
 - [Install Requirements](#install-requirements)
 - [Setup DinD](#setup-docker-in-dockerdind)
 - [Run Dags](#run-dags)
+- [Pass Variables](#pass-variables)
 - [Security](#security)
 - [Acknowledgments](#acknowledgments)
 - [Citing This Tutorial](#citing-this-tutorial)
@@ -96,6 +97,8 @@ Alternatively, you can build the image yourself. The code and Dockerfile are ava
 For creating a DAG, I have also provided a simple example DAG that you can find in the `airflow-docker-setup/dags/` directory. Once you have saved your dag.py file, it should appear under the DAGs section in the Airflow interface.
 
 You can trigger the DAG directly from the interface and monitor its progress in the `Logs` section. The task should execute successfully if the Docker socket is mounted correctly. If any issues arise, detailed error messages will be available in the `Logs` section to help with troubleshooting.
+
+# Pass Variables
 
 # Security
 In addition to using RBAC (Role-Based Access Control), you can enhance the security of your Airflow setup by encrypting sensitive data stored in your database with a Fernet key.
