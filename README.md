@@ -100,6 +100,8 @@ For creating a DAG, I have also provided a simple example DAG that you can find 
 You can trigger the DAG directly from the interface and monitor its progress in the `Logs` section. The task should execute successfully if the Docker socket is mounted correctly. If any issues arise, detailed error messages will be available in the `Logs` section to help with troubleshooting.
 
 # Pass Variables
+In order to pass variables from Airflow to your image you
+
 # Triggering DAGs with Airflow API
 
 To trigger a DAG using your username and password, use the following `curl` command. Ensure that the DAG is turned **ON**; otherwise, the trigger will be queued.
