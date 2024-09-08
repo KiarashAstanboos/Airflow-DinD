@@ -3,6 +3,10 @@ from datetime import timedelta, datetime
 from airflow.operators.bash import BashOperator
 from airflow.providers.docker.operators.docker import DockerOperator
 
+db_host = Variable.get("DB_HOST")
+db_user = Variable.get("DB_USER")
+db_password = Variable.get("DB_PASSWORD")
+
 
 default_args = {
     "owner": "You",
@@ -36,7 +40,26 @@ with DAG(
         docker_url='unix://var/run/docker.sock',  
         network_mode='bridge',
     )
+        task4=DockerOperator(
+        task_id='database',  
+        image='yourimage',  
+        api_version='auto',
+        auto_remove=True,
+        docker_url='unix://var/run/docker.sock',  
+        network_mode='bridge',
+        mounts=[docker.types.Mount(
+            source='/home/kiarash/Desktop/dumps',
+            target='/app/dumps',
+            type='bind',  
+            read_only=False 
+    )],
+        environment={
+        'DB_HOST': db_host,
+        'DB_USER': db_user,
+        'DB_PASSWORD': db_password,
+    }
 
+    )
     task1 >> task2 
-    task1 >> task3 
+    task1 >> task3 >> task4 
 
