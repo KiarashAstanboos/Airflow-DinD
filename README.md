@@ -102,13 +102,6 @@ You can trigger the DAG directly from the interface and monitor its progress in 
 # Pass Variables
 # Triggering DAGs with Airflow API
 
-Airflow provides two ways to authenticate when triggering DAGs using its API:
-
-1. **Username and Password**
-2. **Token Authentication**
-
-## 1. Triggering a DAG Using Username and Password
-
 To trigger a DAG using your username and password, use the following `curl` command. Ensure that the DAG is turned **ON**; otherwise, the trigger will be queued.
 
 ```bash
@@ -122,7 +115,7 @@ Replace:
 - `<airflow-host>` with your Airflow host (e.g., `http://localhost:8080`).
 - `<dag_id>` with the ID of your DAG (usually, this is the name of your DAG).
 
-## 2. Triggering a DAG Using Token Authentication
+
 
 # Security
 In addition to using RBAC (Role-Based Access Control), you can enhance the security of your Airflow setup by encrypting sensitive data stored in your database with a Fernet key.
