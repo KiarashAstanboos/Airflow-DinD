@@ -5,6 +5,7 @@
 - [Setup DinD](#setup-docker-in-dockerdind)
 - [Run Dags](#run-dags)
 - [Pass Variables](#pass-variables)
+- [API](#api)
 - [Security](#security)
 - [Acknowledgments](#acknowledgments)
 - [Citing This Tutorial](#citing-this-tutorial)
@@ -99,7 +100,7 @@ For creating a DAG, I have also provided a simple example DAG that you can find 
 You can trigger the DAG directly from the interface and monitor its progress in the `Logs` section. The task should execute successfully if the Docker socket is mounted correctly. If any issues arise, detailed error messages will be available in the `Logs` section to help with troubleshooting.
 
 # Pass Variables
-
+# API
 # Security
 In addition to using RBAC (Role-Based Access Control), you can enhance the security of your Airflow setup by encrypting sensitive data stored in your database with a Fernet key.
 
