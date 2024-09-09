@@ -5,7 +5,7 @@
 - [Setup DinD](#setup-docker-in-dockerdind)
 - [Run Dags](#run-dags)
 - [Pass Variables](#pass-variables)
-- [API](#api)
+- [Triggering DAGs with Airflow API](#triggering-dags-with-airflow-api)
 - [Security](#security)
 - [Acknowledgments](#acknowledgments)
 - [Citing This Tutorial](#citing-this-tutorial)
