@@ -2,10 +2,17 @@ from airflow import DAG
 from datetime import timedelta, datetime
 from airflow.operators.bash import BashOperator
 from airflow.providers.docker.operators.docker import DockerOperator
+from airflow.models import Variable
 
 db_host = Variable.get("DB_HOST")
 db_user = Variable.get("DB_USER")
-db_password = Variable.get("DB_PASSWORD")
+# db_password = Variable.get("DB_PASSWORD")
+
+# from airflow.hooks.base import BaseHook
+# connection = BaseHook.get_connection("conn1")
+# db_host = connection.host
+# db_user = connection.login
+# db_password = connection.password
 
 
 default_args = {
