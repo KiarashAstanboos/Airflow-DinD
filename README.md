@@ -4,7 +4,7 @@
 - [Install Requirements](#install-requirements)
 - [Setup DinD](#setup-docker-in-dockerdind)
 - [Run Dags](#run-dags)
-- [Pass Variables](#pass-variables)
+- [Passing Variables to Tasks in Airflow](#passing-variables-to-tasks-in-airflow)
 - [Triggering DAGs with Airflow API](#triggering-dags-with-airflow-api)
 - [Security](#security)
 - [Acknowledgments](#acknowledgments)
@@ -99,9 +99,28 @@ For creating a DAG, I have also provided a simple example DAG that you can find 
 
 You can trigger the DAG directly from the interface and monitor its progress in the `Logs` section. The task should execute successfully if the Docker socket is mounted correctly. If any issues arise, detailed error messages will be available in the `Logs` section to help with troubleshooting.
 
-# Pass Variables
-In order to pass variables from Airflow to your image you
+# Passing Variables to Tasks in Airflow
 
+To pass variables from Airflow to your tasks, follow these steps:
+
+1. **Create Variables/Connections:**
+   - Navigate to the **Admin** tab, then select **Connections** or **Variables**.
+   - After creating your variable or connection, they can be imported into your DAG using:
+     - `Variable.get("variable_id")` for variables
+     - `BaseHook.get_connection("connection_id")` for connections
+   - (Both methods are demonstrated in the example DAG provided.)
+
+2. **Pass Variables to Your Image:**
+   - If you need to pass variables to a Docker image, you must set environment variables in the Dockerfile.
+   - Use `os.getenv()` in your code to access these environment variables (refer to the `PassVariables` folder for a simple SQL connection example).
+
+3. **Using Airflow Variables in Docker Tasks:**
+   - After importing the variables to your DAG, you can pass them to the Docker image by using the `environment={}` argument in your task definition (see `task4` for an example).
+   - Once set, the image will utilize the passed variables as environment variables, and your task should execute successfully.
+
+
+
+This version is more structured, breaking the content into clear steps with improved readability. Let me know if you'd like to add or change anything else!
 # Triggering DAGs with Airflow API
 
 To trigger a DAG using your username and password, use the following `curl` command. Ensure that the DAG is turned **ON**; otherwise, the trigger will be queued.
