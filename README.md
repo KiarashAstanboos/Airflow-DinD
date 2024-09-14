@@ -120,7 +120,6 @@ To pass variables from Airflow to your tasks, follow these steps:
 
 
 
-This version is more structured, breaking the content into clear steps with improved readability. Let me know if you'd like to add or change anything else!
 # Triggering DAGs with Airflow API
 
 To trigger a DAG using your username and password, use the following `curl` command. Ensure that the DAG is turned **ON**; otherwise, the trigger will be queued.
